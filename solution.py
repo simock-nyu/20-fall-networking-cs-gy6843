@@ -11,7 +11,7 @@ items = {
     "Is it possible to decrypt a message without a key? - Yes/No": "No",
     "Is it possible to decode a message without a key? - Yes/No": "No",
     "Is a hashed message supposed to be un-hashed? - Yes/No": "No",
-    "What is the MD5 hashing value to the following message: 'NYU Computer Networking' - Use MD5 hash generator and use the answer in your code": hash,
+    "What is the MD5 hashing value to the following message: 'NYU Computer Networking' - Use MD5 hash generator and use the answer in your code": 'sssss',
     "Is MD5 a secured hashing algorithm? - Yes/No": "No",
     "What layer from the TCP/IP model the protocol DHCP belongs to? - The answer should be a numeric number": 5,
     "What layer of the TCP/IP model the protocol TCP belongs to? - The answer should be a numeric number": 5
