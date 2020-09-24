@@ -1,4 +1,4 @@
-# 1643
+# 1648
 
 from socket import *
 
@@ -52,32 +52,32 @@ def smtp_client(port=1025, mailserver='127.0.0.1'):
     # log(recv1)
     # Fill in end
 
-    # Send DATA command and print server response.
-    # Fill in start
-    cmd = 'DATA\r\n'
-    clientSocket.send(cmd.encode())
-    recv1 = clientSocket.recv(1024).decode()
-    # log(recv1)
-    # Fill in end
+    # # Send DATA command and print server response.
+    # # Fill in start
+    # cmd = 'DATA\r\n'
+    # clientSocket.send(cmd.encode())
+    # recv1 = clientSocket.recv(1024).decode()
+    # # log(recv1)
+    # # Fill in end
 
-    # Send message data.
-    # Fill in start
-    clientSocket.send(msg.encode())
-    recv1 = clientSocket.recv(1024).decode()
-    # Fill in end
+    # # Send message data.
+    # # Fill in start
+    # clientSocket.send(msg.encode())
+    # recv1 = clientSocket.recv(1024).decode()
+    # # Fill in end
 
-    # Message ends with a single period.
-    # Fill in start
-    clientSocket.send(endmsg.encode())
-    recv1 = clientSocket.recv(1024).decode()
-    # Fill in end
+    # # Message ends with a single period.
+    # # Fill in start
+    # clientSocket.send(endmsg.encode())
+    # recv1 = clientSocket.recv(1024).decode()
+    # # Fill in end
 
-    # Send QUIT command and get server response.
-    # Fill in start
-    cmd = 'QUIT\r\n'
-    clientSocket.send(cmd.encode())
-    recv1 = clientSocket.recv(1024).decode()
-    # Fill in end
+    # # Send QUIT command and get server response.
+    # # Fill in start
+    # cmd = 'QUIT\r\n'
+    # clientSocket.send(cmd.encode())
+    # recv1 = clientSocket.recv(1024).decode()
+    # # Fill in end
 
 
 if __name__ == '__main__':
