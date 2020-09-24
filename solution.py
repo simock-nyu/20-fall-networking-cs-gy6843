@@ -1,6 +1,6 @@
 from socket import *
 
-is_debugging = False
+is_debugging = True
 
 def log(message):
     if is_debugging:
@@ -61,14 +61,12 @@ def smtp_client(port=1025, mailserver='127.0.0.1'):
     # Fill in start
     clientSocket.send('hi'.encode())
     recv1 = clientSocket.recv(1024).decode()
-    log(recv1)
     # Fill in end
 
     # Message ends with a single period.
     # Fill in start
     clientSocket.send('\r\n.\r\n'.encode())
     recv1 = clientSocket.recv(1024).decode()
-    log(recv1)
     # Fill in end
 
     # Send QUIT command and get server response.
