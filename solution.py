@@ -1,4 +1,4 @@
-# 1648
+# 1657
 
 from socket import *
 
@@ -52,13 +52,13 @@ def smtp_client(port=1025, mailserver='127.0.0.1'):
     # log(recv1)
     # Fill in end
 
-    # # Send DATA command and print server response.
-    # # Fill in start
-    # cmd = 'DATA\r\n'
-    # clientSocket.send(cmd.encode())
-    # recv1 = clientSocket.recv(1024).decode()
-    # # log(recv1)
-    # # Fill in end
+    # Send DATA command and print server response.
+    # Fill in start
+    cmd = 'DATA\r\n'
+    clientSocket.send(cmd.encode())
+    recv1 = clientSocket.recv(1024).decode()
+    # log(recv1)
+    # Fill in end
 
     # # Send message data.
     # # Fill in start
