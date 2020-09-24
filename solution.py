@@ -34,29 +34,49 @@ def smtp_client(port=1025, mailserver='127.0.0.1'):
 
     # Send MAIL FROM command and print server response.
     # Fill in start
+    cmd = 'MAIL FROM:scott.simock@nyu.edu\r\n'
+    clientSocket.send(cmd.encode())
+    recv1 = clientSocket.recv(1024).decode()
+    log(recv1)
     # Fill in end
 
     # Send RCPT TO command and print server response.
     # Fill in start
+    cmd = 'RCPT TO:scott.simock@nyu.edu\r\n'
+    clientSocket.send(cmd.encode())
+    recv1 = clientSocket.recv(1024).decode()
+    log(recv1)
     # Fill in end
 
     # Send DATA command and print server response.
     # Fill in start
+    cmd = 'DATA\r\n.\r\n'
+    clientSocket.send(cmd.encode())
+    recv1 = clientSocket.recv(1024).decode()
+    log(recv1)
     # Fill in end
 
     # Send message data.
     # Fill in start
+    clientSocket.send('hi'.encode())
+    recv1 = clientSocket.recv(1024).decode()
+    log(recv1)
     # Fill in end
 
     # Message ends with a single period.
     # Fill in start
+    clientSocket.send('.'.encode())
+    recv1 = clientSocket.recv(1024).decode()
+    log(recv1)
     # Fill in end
 
     # Send QUIT command and get server response.
     # Fill in start
+    cmd = 'QUIT\r\n'
+    clientSocket.send(cmd.encode())
+    recv1 = clientSocket.recv(1024).decode()
     # Fill in end
 
 
 if __name__ == '__main__':
     smtp_client(1025, '127.0.0.1')
-    # smtp_client(465, 'smtp.gmail.com')    
