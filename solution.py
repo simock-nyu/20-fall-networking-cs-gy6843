@@ -1,9 +1,9 @@
 from socket import *
 
-is_debugging = True
+is_debugging = False
 
 def log(message):
-    if is_debugging:
+    if is_debugging == True:
         print(message)
 
 def smtp_client(port=1025, mailserver='127.0.0.1'):
@@ -51,7 +51,7 @@ def smtp_client(port=1025, mailserver='127.0.0.1'):
 
     # Send DATA command and print server response.
     # Fill in start
-    cmd = 'DATA'
+    cmd = 'DATA\r\n'
     clientSocket.send(cmd.encode())
     recv1 = clientSocket.recv(1024).decode()
     log(recv1)
