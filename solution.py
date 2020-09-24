@@ -33,13 +33,13 @@ def smtp_client(port=1025, mailserver='127.0.0.1'):
     # if recv1[:3] != '250':
     #     log('250 reply not received from server.')
 
-    # # Send MAIL FROM command and print server response.
-    # # Fill in start
-    # cmd = 'MAIL FROM:<scott.simock@nyu.edu>\r\n'
-    # clientSocket.send(cmd.encode())
-    # recv1 = clientSocket.recv(1024).decode()
-    # # log(recv1)
-    # # Fill in end
+    # Send MAIL FROM command and print server response.
+    # Fill in start
+    cmd = 'MAIL FROM:<scott.simock@nyu.edu>\r\n'
+    clientSocket.send(cmd.encode())
+    recv1 = clientSocket.recv(1024).decode()
+    # log(recv1)
+    # Fill in end
 
     # # Send RCPT TO command and print server response.
     # # Fill in start
