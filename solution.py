@@ -1,4 +1,4 @@
-# 1657
+# 1700
 
 from socket import *
 
@@ -9,9 +9,6 @@ from socket import *
 #         print(message)
 
 def smtp_client(port=1025, mailserver='127.0.0.1'):
-    msg = "\r\n My message"
-    endmsg = "\r\n.\r\n"
-
     # Choose a mail server (e.g. Google mail server) if you want to verify the script beyond GradeScope
 
     # Create socket called clientSocket and establish a TCP connection with mailserver and port
@@ -60,16 +57,18 @@ def smtp_client(port=1025, mailserver='127.0.0.1'):
     # log(recv1)
     # Fill in end
 
-    # # Send message data.
-    # # Fill in start
-    # clientSocket.send(msg.encode())
-    # recv1 = clientSocket.recv(1024).decode()
-    # # Fill in end
+    # Send message data.
+    # Fill in start
+    msg = "My message\r\n "
+    clientSocket.send(msg.encode())
+    recv1 = clientSocket.recv(1024).decode()
+    # Fill in end
 
     # # Message ends with a single period.
     # # Fill in start
-    # clientSocket.send(endmsg.encode())
-    # recv1 = clientSocket.recv(1024).decode()
+    endmsg = "."
+    clientSocket.send(endmsg.encode())
+    recv1 = clientSocket.recv(1024).decode()
     # # Fill in end
 
     # # Send QUIT command and get server response.
