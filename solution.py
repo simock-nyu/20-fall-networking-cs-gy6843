@@ -1,4 +1,4 @@
-# 1700
+# 1705
 
 from socket import *
 
@@ -59,14 +59,14 @@ def smtp_client(port=1025, mailserver='127.0.0.1'):
 
     # Send message data.
     # Fill in start
-    msg = "My message\r\n "
+    msg = "My message\r\n"
     clientSocket.send(msg.encode())
     recv1 = clientSocket.recv(1024).decode()
     # Fill in end
 
     # # Message ends with a single period.
     # # Fill in start
-    endmsg = "."
+    endmsg = ".\r\n"
     clientSocket.send(endmsg.encode())
     recv1 = clientSocket.recv(1024).decode()
     # # Fill in end
